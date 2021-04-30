@@ -1,0 +1,162 @@
+:root{
+    --vermelho: #E50914;
+    --preto: #141414;
+    --cinza: #AAA;
+    --branco: #fff
+}
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*elemento base*/
+body{
+    background: var(--preto);
+    color: white;
+
+    font-family: 'open sans','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+header .container{
+    
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .logo{
+    margin-left: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.img-logo{
+    width: 130px;
+}
+
+header nav{
+    margin-right: 70px;
+}
+
+header nav a{
+    text-decoration: none;
+    color: var(--cinza);
+    margin-right: 20px;
+
+    font-family: 'open sans','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
+}
+
+header nav a:hover{
+    color: var(--branco);
+}
+
+/*filme principal*/
+.filme-principal{
+    font-size: 16px;
+    background: linear-gradient(rgba(0,0,0,.50),rgba(0,0,0,.50)100%), url('./img/kengan-ashura.jpg');
+    height: 550px;
+    background-size: cover;
+    background-blend-mode: color-dodge;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.filme-principal .titulo{
+    margin-top: 15%;
+
+    font-size: 40px;
+    font-family: 'open sans','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.filme-principal .descricao{
+    width: 45%;
+
+    margin-bottom: 40px;
+
+    font-size: 20px;
+}
+
+.botao{
+    background-color: rgba(0,0,0,.50);
+    color: white;
+    
+    border: none;
+    padding: 15px 30px;
+    margin-right: 15px;
+
+    font-size: 15px;
+    font-family: 'open sans','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+    cursor: pointer;
+    transition: .3s ease all;
+}
+
+.botao:hover{
+    background-color: white;
+    color: black;
+}
+
+.botao i{
+    margin-right: 8px;
+}
+
+.container{
+    margin-left: 30px;
+}
+.box-filme{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.carrosel-filmes{
+    margin-top: 15px;
+    margin-left: 60px;
+    margin-right: 60px;
+}
+
+.subtitulo{
+    font-family: 'open sans','Netflix Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+    font-size: 30px;
+
+    margin-top: 30px;
+    margin-left: 60px;
+}
+
+@media screen and (max-width:700px){
+    header .container{
+        display: flex;
+        flex-direction: column;
+        margin-left: 0;
+    }
+
+    header nav {
+        margin-right: 0;
+    }
+
+    header nav a{
+        margin-right: 7px;
+    }
+
+    .filme-principal .descricao{
+        width: 80%;
+    }
+
+    .botao{
+        display: flex;
+        margin-top: 5px;
+        width: 230px;
+        height: 50px;
+    }
+    
+}
